@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace lab1
 {
@@ -31,6 +32,66 @@ namespace lab1
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Корни квадратного уравнения");
             Console.ResetColor();
+            if (coef[0] == 0 && coef[1] == 0 && coef[2] == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корни - любое число");
+                Console.ResetColor();
+                Thread.Sleep(50000);
+                Environment.Exit(0);
+            }
+            if (coef[0] == 0 && coef[1] == 0 && coef[2] == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корень квадратного уравнения равен - " + coef[2]);
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Корни биквадратного уравнения");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корни биквадратного уравнения будут равны +/- 1 ");
+                Thread.Sleep(50000);
+                Environment.Exit(0);
+            }
+            if (coef[0] == 0 && coef[1] == 1 && coef[2] == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корень квадратного уравнения равен - " + coef[2] * (-1));
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Корни биквадратного уравнения");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корни биквадратного уравнения отсутствуют");
+                Thread.Sleep(50000);
+                Environment.Exit(0);
+            }
+            if (coef[0] == 0 && coef[1] == 1 && coef[2] == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корень квадратного уравнения равен - 0");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Корни биквадратного уравнения");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корни биквадратного уравнения также будут равны 0");
+                Thread.Sleep(50000);
+                Environment.Exit(0);
+            }
+            if (coef[0] == 1 && coef[1] == 0 && coef[2] == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корень квадратного уравнения равен - 0");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Корни биквадратного уравнения");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Корни биквадратного уравнения также будут равны 0");
+                Thread.Sleep(50000);
+                Environment.Exit(0);
+            }
             if (D >= 0)
             {
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -38,11 +99,12 @@ namespace lab1
                 x2 = (-coef[1] - Math.Sqrt(D)) / (2 * coef[0]);
                 Console.WriteLine("x1={0} " + Environment.NewLine + "x2={1}", x1, x2);
                 Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Корни биквадратного уравнения");
+                Console.ResetColor();
                 if (x1 >= 0)
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Корни биквадратного уравнения");
-                    Console.ResetColor();
+
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     y1 = Math.Sqrt(x1);
                     y2 = Math.Sqrt(x1) * (-1);
@@ -55,11 +117,12 @@ namespace lab1
                     Console.WriteLine("Корень меньше нуля");
                     Console.ResetColor();
                 }
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Корни биквадратного уравнения");
+                Console.ResetColor();
                 if (x2 >= 0)
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Корни биквадратного уравнения");
-                    Console.ResetColor();
+
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     y3 = Math.Sqrt(x1);
                     y4 = Math.Sqrt(x1) * (-1);
@@ -76,10 +139,9 @@ namespace lab1
             if (D < 0)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                x1 = (-coef[1] / (2 * coef[0]));
-                x2 = Math.Sqrt(Math.Abs(D)) / (2 * coef[0]);
-                Console.WriteLine("x1={0}+{1:F3}i" + Environment.NewLine + "x2={0}-{1:F3}i", x1, x2);
+                Console.WriteLine("Дискриминант меньше нуля, корней нет");
                 Console.ResetColor();
+
             }
             Console.ReadKey();
 

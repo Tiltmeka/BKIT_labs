@@ -129,8 +129,8 @@ namespace lab1
                     {
 
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        y3 = Math.Sqrt(x1);
-                        y4 = Math.Sqrt(x1) * (-1);
+                        y3 = Math.Sqrt(x2);
+                        y4 = Math.Sqrt(x2) * (-1);
                         Console.WriteLine("y3={0} " + Environment.NewLine + "y4={1}", y3, y4);
                         Console.ResetColor();
                     }
@@ -274,8 +274,8 @@ namespace lab1
                 if (x2 >= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    y3 = Math.Sqrt(x1);
-                    y4 = Math.Sqrt(x1) * (-1);
+                    y3 = Math.Sqrt(x2);
+                    y4 = Math.Sqrt(x2) * (-1);
                     Console.WriteLine("y3={0} " + Environment.NewLine + "y4={1}", y3, y4);
                     Console.ResetColor();
                 }
@@ -398,8 +398,8 @@ namespace lab1
                 if (x2 >= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    y3 = Math.Sqrt(x1);
-                    y4 = Math.Sqrt(x1) * (-1);
+                    y3 = Math.Sqrt(x2);
+                    y4 = Math.Sqrt(x2) * (-1);
                     Console.WriteLine("y3={0} " + Environment.NewLine + "y4={1}", y3, y4);
                     Console.ResetColor();
                 }
@@ -421,6 +421,5 @@ namespace lab1
     }
 }
 
-//bruh
 
 

@@ -14,7 +14,6 @@ namespace lab2csharp
             this.Radius = pr;
             this.Type = "Круг";
         }
-
         public override double Area()
         {
             double Result = Math.PI * this.Radius * this.Radius;

@@ -8,7 +8,6 @@ namespace lab2csharp
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
             Console.Title = "Якубов Артём, ИУ5-33Б";
